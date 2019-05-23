@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baloo Bhai", cursive;
+}
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  font-family: sans-serif;
+  color: white;
+}
+@mixin display() {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.location {
+  background: linear-gradient(#2f96a3, #303e8f);
+  height: 50vh;
+  width: 100%;
+  @include display();
+}
+
+.temperature {
+  background: linear-gradient(#2f96a3, #303e8f);
+  padding: -5% 0 0 0;
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  @include display();
+  span {
+    font-weight: bold;
+    position: absolute;
+    left: 53%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.location h2,
+.temperature h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.temperature h4 {
+  text-transform: uppercase;
+}
+
+#nav-bar {
+  top: 0;
+  position: relative;
+  height: 10vh;
+  @include display();
+  .btn {
+    position: absolute;
+    left: 78%;
+    width: 5%;
+    height: 30px;
+    cursor: pointer;
+  }
+}
+#search-bar {
+  height: 5vh;
+  width: 50%;
+}
+// .degree-section {
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+// }
+// .degree-section {
+//   span {
+//     margin: 10px;
+//     font-size: 30px;
+//   }
+//   h2 {
+//     font-size: 40px;
+//   }
+// }
